@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ssiot="http://schemas.android.com/apk/res/com.ssiot.donghai"
+    android:id="@+id/frag_main_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ssiot.donghai.MainFragment" >
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="9dp"
+        android:gravity="center"
+        android:horizontalSpacing="2dp"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="2dp"
+        android:visibility="gone" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:shrinkColumns="1" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <com.ssiot.donghai.view.IconView
+                android:id="@+id/btn_monitor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bk_yellow_select"
+                ssiot:myimg="@drawable/icon_monitor_select"
+                ssiot:mytxt="@string/iconstr_monitor"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:visibility="visible" />
+            
+            <com.ssiot.donghai.view.IconView
+                android:id="@+id/btn_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bk_purple_select"
+                ssiot:myimg="@drawable/icon_video_select"
+                ssiot:mytxt="@string/iconstr_video"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:visibility="visible" />
+
+            
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+            
+            <com.ssiot.donghai.view.IconView
+                android:id="@+id/btn_control"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bk_green_select"
+                ssiot:myimg="@drawable/icon_control_select"
+                ssiot:mytxt="@string/iconstr_control"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:visibility="visible" />
+
+            <com.ssiot.donghai.view.IconView
+                android:id="@+id/btn_history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bk_pink_select"
+                ssiot:myimg="@drawable/icon_history_select"
+                ssiot:mytxt="@string/iconstr_history"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:visibility="visible" />
+            
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <com.ssiot.donghai.view.IconView
+                android:id="@+id/btn_expert"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bk_yellow_select"
+                ssiot:myimg="@drawable/icon_expert_select"
+                ssiot:mytxt="@string/iconstr_expert"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:visibility="visible" />
+
+            <com.ssiot.donghai.view.IconView
+                android:id="@+id/btn_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bk_green_select"
+                ssiot:myimg="@drawable/icon_info_select"
+                ssiot:mytxt="@string/iconstr_info"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:visibility="visible" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

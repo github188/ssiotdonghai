@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9cb80" >
+
+    <RelativeLayout
+        android:id="@+id/control_d_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <RelativeLayout
+            android:id="@+id/control_d_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/control_d_node_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="control-title"
+                android:textColor="@color/ssiotgreen"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/control_d_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="3dp"
+                android:src="@drawable/online" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/control_d_divider_bar"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/control_d_title_bar"
+            android:background="#fff39800" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/control_d_divider_bar"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/ctr_d_btn_allopen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_margin="2dp"
+                android:padding="3dp"
+                android:background="#ff007130"
+                android:text="全部开启"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/ctr_d_btn_allclose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_margin="2dp"
+                android:padding="3dp"
+                android:background="#ff898989"
+                android:text="全部关闭"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/ctr_d_btn_newtiming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_margin="2dp"
+                android:padding="3dp"
+                android:background="#ff920783"
+                android:text="定时" />
+
+            <TextView
+                android:id="@+id/ctr_d_btn_newcircle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_margin="2dp"
+                android:padding="3dp"
+                android:background="#ff0068b7"
+                android:text="循环" />
+
+            <TextView
+                android:id="@+id/ctr_d_btn_newtrigger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_margin="2dp"
+                android:padding="3dp"
+                android:background="#fff39800"
+                android:text="触发" />
+        </LinearLayout>
+    </RelativeLayout>
+    
+    <HorizontalScrollView
+        android:id="@+id/control_d_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/control_d_bar"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="none" >
+
+<!--         <LinearLayout -->
+<!--             android:id="@+id/indicator_holder" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:layout_gravity="center" -->
+<!--             android:orientation="horizontal" > -->
+<!--         </LinearLayout> -->
+        
+<!--         <RadioGroup -->
+<!--             android:id="@+id/indicator_holder_2" -->
+<!--             android:layout_width="match_parent" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:background="#ff7aa442" -->
+<!--             android:layout_gravity="center" -->
+<!--             android:gravity="center" -->
+<!--             android:orientation="horizontal" /> -->
+
+    </HorizontalScrollView>
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/control_d_indicator"
+        android:layout_margin="10dp"
+        android:background="#ffffffff" >
+<!--         <android.support.v4.view.PagerTabStrip -->
+<!--             android:id="@+id/tabstrip" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="50dip" -->
+<!--             android:gravity="center" /> -->
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+<!--     36 20 -->
+    <ImageView
+        android:id="@+id/videolist_icon" 
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:scaleType="centerInside"
+        />
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@id/videolist_icon">
+        
+        <TextView
+            android:id="@+id/videoitem_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingTop="5dp"
+            android:textSize="20sp" />
+
+        <TextView 
+            android:id="@+id/video_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/videoitem_text"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:maxLines="1"
+            android:textSize="13sp"
+            android:textColor="@color/grey"
+            />
+    </RelativeLayout>
+
+    
+
+    
+    
+    <ImageView 
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/arrow"/>
+    
+    <TextView
+        android:id="@+id/videoitem_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/arrow"
+        android:paddingRight="10dp"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:textSize="20sp" />
+    
+    <ImageView 
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/arrow"
+        android:paddingRight="5dp"
+        android:src="@null"/>
+
+</RelativeLayout>

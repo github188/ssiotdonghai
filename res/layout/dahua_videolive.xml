@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/live_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/video_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="video title"
+        android:textSize="20sp"
+        android:textColor="#69c911" />
+
+    <com.ssiot.donghai.view.SquareLayout
+        android:id="@+id/camera_square"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/video_title"
+        android:orientation="vertical" >
+
+        <SurfaceView
+            android:id="@+id/view_PlayWindow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            class="SurfaceView" />
+    </com.ssiot.donghai.view.SquareLayout>
+    
+    <TextView
+        android:id="@+id/video_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/camera_square"
+        android:gravity="center"
+        android:visibility="visible"
+        android:textSize="20sp"
+        android:text="控制栏"
+        android:textColor="#69c911" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/video_divider"
+        layout="@layout/dahua_ptzview" />
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/moni_title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/moni_title_barbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <TextView
+            android:id="@+id/moni_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="节点名称"
+            android:textColor="@color/ssiotgreen"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/moni_net_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="3dp"
+            android:src="@drawable/connect_gprs" />
+
+        <ImageView
+            android:id="@+id/moni_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/moni_net_type"
+            android:paddingBottom="3dp"
+            android:src="@drawable/online" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/moni_divider_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/moni_title_barbar"
+        android:src="#fff39800" />
+
+</RelativeLayout>

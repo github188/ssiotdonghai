@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">东海农业</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">设置</string>
+    <string name="action_settings_2">Settings_2</string>
+    <string name="action_refresh">刷新</string>
+    <string name="action_refresh_link">正在刷新连接状态</string>
+    <string name="action_logout">退出当前账户</string>
+    
+    <string name="iconstr_monitor">节点监测</string>
+    <string name="iconstr_control">自动控制</string>
+    <string name="iconstr_history">追溯查询</string>
+    <string name="iconstr_video">视频图像</string>
+    <string name="iconstr_expert">专家系统</string>
+    <string name="iconstr_info">信息发布</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="opennow">立即开启</string>
+    <string name="timing">定时</string>
+    <string name="trigger">触发</string>
+    
+    
+<!--     copy from old svn -->
+    <string name="alternate_title">An alternate title that is long</string>
+    <string name="toggle_title">Toggle title</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_share">Share</string>
+    <string name="loghint">请输入登录名</string>
+    <string name="pwdhint">请输入密码</string>
+    <string name="btnText"></string>
+    <string name="chkBoxText">记住密码？</string>
+    <string name="title2">传感器网络</string>
+    <string name="menu_setting">设置</string>
+    <string name="soft_update_no">已经是最新版本</string>
+    <string name="soft_update_title">软件更新</string>
+    <string name="soft_update_info">检测到新版本，立即更新吗?\n您可在设置中主动检测更新。</string>
+    <string name="soft_update_updatebtn">更新</string>
+    <string name="soft_update_later">不更新</string>
+    <string name="soft_updating">正在更新</string>
+    <string name="soft_update_cancel">取消</string>
+    <string name="soft_check">检查更新</string>
+    
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+    <string name="please_check_net">无法连接到互联网，请检查网络！</string>
+    <string name="search">搜索</string>
+    <string name="search_his_list_title">查询历史</string>
+    <string name="building">正在开发</string>
+    
+<!--     大华 -->
+	<string name="DemoInit">Demo initialization</string>
+	<string name="DemoExit">Demo exit</string>
+	<string name="SDKVersion">NetSDK Version: </string>
+	
+		<!-- Login mode activity -->
+		<string name="login_mode_activity_title">Login Mode</string>
+		<string name="login_mode_activity_info">Please select suitable environment: </string>
+		<string name="login_mode_activity_ip">IP</string>
+		<string name="login_mode_activity_p2p">P2P</string>
+		
+		<!-- p2p activity -->
+		<string name="p2p_activity_title">P2P Config</string>
+		<string name="p2p_activity_ip">Server IP: </string>
+		<string name="p2p_activity_port">Server Port: </string>
+		<string name="p2p_activity_password">Password: </string>
+		<string name="p2p_activity_dev_id">Device ID: </string>
+		<string name="p2p_activity_dev_port">Device Port: </string>
+		<string name="p2p_activity_config">Config</string>
+		<string name="p2p_activity_autologin">Remember input</string>
+	
+		<!-- Login activity -->
+		<string name="login_activity_title">Login</string>
+		<string name="login_activity_ip">Device IP: </string>
+		<string name="login_activity_port">Device Port: </string>
+		<string name="login_activity_user">User Name: </string>
+		<string name="login_activity_password">Password: </string>
+		<string name="login_activity_login">Login</string>
+		<string name="login_activity_login_success">Login success</string>
+		<string name="login_activity_login_failed">Login failed</string>
+		<string name="login_activity_autologin">Remember input</string>
+		<string name="login_activity_port_err">Please check port</string>
+		
+			<!-- Functions activity -->
+			<string name="fun_activity_title">Functions</string>
+			<string name="GlobalSetting">Global setting</string>
+			<string name="MultiPlay">Multiple preview</string>
+			<string name="RealPlay">Real play</string>
+			<string name="Talk">Talk</string>
+			<string name="FilePlayBack">Play back by record</string>
+			<string name="TimePlayBack">Play back by time</string>
+			<string name="PicPlayBack">Play back by pictures</string>
+			<string name="Alarm">Alarm</string>
+			<string name="UserMan">User management</string>
+			<string name="DiskInfo">Disk information</string>
+			<string name="RecordPlan">Record Plan</string>
+			<string name="MotionDetect">Motion Detect</string>
+			<string name="ShelterDetect">Shelter Detect</string>
+			<string name="TestInterface">Interface testing</string>
+			<string name="fun_alarm_out">Alarm Out</string>
+			<string name="intelbrass">IntelBrass</string>
+			
+				<!-- Global setting activity -->
+				<string name="global_setting_activity_title">Global setting</string>
+				<string name="global_setting_activity_chn">Video channel: </string>
+				<string name="global_setting_activity_pb_stream">Playback stream: </string>
+				<string name="global_setting_activity_pb_stream_all">Main and Sub stream</string>
+				<string name="global_setting_activity_pb_stream_main">Main stream</string>
+				<string name="global_setting_activity_pb_stream_sub">Sub stream</string>
+				
+				<!-- multiple play activity -->
+				<string name="multi_play_activity_title">Multiple play</string>
+				<string name="multi_play_activity_info">Device not support multiple play</string>
+				<string name="multi_play_activity_start">Start</string>
+				<string name="multi_play_activity_stop">Stop</string>
+				<string name="multi_play_activity_type_prm">Please select views</string>
+				<string name="multi_play_activity_mp_1">1 view</string>
+				<string name="multi_play_activity_mp_4">4 view</string>
+				<string name="multi_play_activity_mp_8">8 view</string>
+				<string name="multi_play_activity_mp_9">9 view</string>
+				<string name="multi_play_activity_mp_16">16 view</string>
+				<string name="multi_play_activity_mp_6">6 view</string>
+				<string name="multi_play_activity_mp_12">12 view</string>
+				<string name="multi_play_activity_mp_25">25 view</string>
+				<string name="multi_play_activity_mp_36">36 view</string>
+				<string name="multi_play_activity_chn_prm">Please select begin channel</string>
+			
+				<!-- Real play activity -->
+				<string name="live_activity_title">实时视频监控</string>
+				<string name="live_activity_flash">Flash Ctrl</string>
+				<string name="live_activity_ptz">PTZ</string>
+				<string name="live_activity_start">StartRecord</string>
+				<string name="live_activity_stop">StopRecord</string>
+				<string name="live_activity_open_sound">Open sound</string>
+				<string name="live_activity_close_sound">Close sound</string>
+				<string name="live_activity_encode">Encoding</string>
+				<string name="live_activity_capture">Snap</string>
+				<string name="live_activity_volume">Volume</string>
+				<string name="live_activity_quality">Quality</string>
+				<string name="live_activity_speed_1">Speed: 1</string>
+				<string name="live_activity_speed_2">Speed: 2</string>
+				<string name="live_activity_speed_3">Speed: 3</string>
+				<string name="live_activity_speed_4">Speed: 4</string>
+				<string name="live_activity_speed_5">Speed: 5</string>
+				<string name="live_activity_speed_6">Speed: 6</string>
+				<string name="live_activity_speed_7">Speed: 7</string>
+				<string name="live_activity_speed_8">Speed: 8</string>
+				
+					<!-- Assistant activity -->
+					<string name="assistant_activity_title">Assistant function</string>
+					
+					<!-- Flash pop window -->
+					<string name="flash_enable">Enable</string>
+					
+					<!-- PTZ pop window -->
+					<string name="live_activity_more">More</string>
+					<string name="live_activity_Up">Up</string>
+					<string name="live_activity_Left">Left</string>
+					<string name="live_activity_Right">Right</string>
+					<string name="live_activity_Down">D</string>
+					<string name="live_activity_LUp">L-U</string>
+					<string name="live_activity_RUp">R-U</string>
+					<string name="live_activit_LDown">L-D</string>
+					<string name="live_activity_RDown">R-D</string>
+					<string name="live_activity_Speed">Speed</string>
+					<string name="live_activity_z_add">Zoom+</string>
+					<string name="live_activity_z_dec">Zoom-</string>
+					<string name="live_activity_f_add">Focus+</string>
+					<string name="live_activity_f_dec">Focus-</string>
+					<string name="live_activity_a_add">Apert+</string>
+					<string name="live_activity_a_dec">Apert-</string>
+					<string name="live_activity_speed_prom">Choice PTZ Speed</string>
+					
+					<!-- Encode config -->
+					<string name="encode_activity_title">Encode setting</string>
+					<string name="encode_activity_mode">Encode Mode: </string>
+					<string name="encode_activity_resolution">Resolution: </string>
+					<string name="encode_activity_fps">Frame Rate(FPS): </string>
+					<string name="encode_activity_bitrate">Bit Rate: </string>
+					<string name="encode_activity_set">Setting</string>
+					<string name="encode_activity_bitrate_ref">Reference Bit Rate: </string>
+					
+					<!-- quality -->
+					<string name="quality_activity_bright">Brightness</string>
+					<string name="quality_activity_contrast">Contrast</string>
+					<string name="quality_activity_saturation">Saturation</string>
+					<string name="quality_activity_huen">Huen</string>
+					
+				
+				<!-- Search record file activity -->
+				<string name="search_activity_title">Searching records</string>
+				<string name="search_activity_search">Search</string>
+				
+					<!-- Play back by file activity -->
+					<string name="play_back_by_file_activity_title">Play back by file</string>
+					
+				<!-- Play back time activity -->
+				<string name="play_back_by_time_activity_title">Play back by time</string>
+				<string name="play_back_by_time_activity_start">Play Rec</string>
+				
+				<!-- Play back by pictures activity -->
+				<string name="play_back_by_pic_title">Play back by pictures</string>
+				<string name="play_back_by_pic_play">Play Pic</string>
+				<string name="play_back_by_pic_info_no_pic">No picture to show</string>
+				
+				<!-- Talk activity -->
+				<string name="talk_activity_title">Talk</string>
+				<string name="CodeType">Code type: </string>
+				<string name="StartTalk">Start</string>
+				<string name="StopTalk">Stop</string>
+				<string name="SpeakOnly">Speak only</string>
+				
+				<!-- Alarm activity -->
+				<string name="alarm_activity_title">Alarm query and listen</string>
+				<string name="alarm_activity_enable">Alarm enable</string>
+				<string name="alarm_activity_external">External alarm</string>
+				<string name="alarm_activity_lost">Video lost</string>
+				<string name="alarm_activity_dynamic">Dynamic detect</string>
+				<string name="alarm_activity_shelter">Shelter alarm</string>
+				<string name="alarm_activity_static">Static alarm</string>
+				<string name="alarm_activity_query">Query Alarm State</string>
+				<string name="alarm_activity_start">Start listen</string>
+				<string name="alarm_activity_stop">Stop listen</string>
+				<string name="alarm_activity_alarm_in">Alarm in</string>
+				<string name="alarm_activity_alarm_out">Alarm out</string>
+				
+				<!-- User Manager activity -->
+				<string name="user_manager_title">User Management</string>
+				<string name="user_manager_group">Group: </string>
+				<string name="user_manager_user">User: </string>
+				<string name="user_manager_right">Right: </string>
+				<string name="user_manager_old_psw">Old PSW: </string>
+				<string name="user_manager_new_psw">New PSW: </string>
+				<string name="user_manager_conf_psw">Confirm PSW: </string>
+				<string name="user_manager_modify_psw">Modify Password</string>
+				<string name="user_manager_psw_dif">New password are not the same</string>
+				
+				<!-- Disk info activity -->
+				<string name="disk_info_title">Disk Information</string>
+				<string name="disk_info_name">Name: </string>
+				<string name="disk_info_state">State: </string>
+				<string name="disk_info_rest">Rest Cap: </string>
+				<string name="disk_info_total">Total Cap: </string>
+				<string name="disk_info_disk_name">Disk</string>
+				<string name="disk_info_hiberation">Hiberation</string>
+				<string name="disk_info_active">Active</string>
+				<string name="disk_info_malfucntion">Malfucntion</string>
+				
+				<!-- Record plan activity -->
+				<string name="record_plan_title">Record plan</string>
+				<string name="record_plan_chn">Channel: </string>
+				<string name="record_plan_pre_rec">PreRec(s): </string>
+				<string name="record_plan_redundancy">Redundancy</string>
+				<string name="record_plan_stream">Stream Type: </string>
+				<string name="record_plan_day">Day of Week: </string>
+				<string name="record_plan_seg">Seg in day: </string>
+				<string name="record_plan_start">Start Time: </string>
+				<string name="record_plan_stop">Stop Time: </string>
+				<string name="record_plan_save">Save</string>
+				<string name="record_plan_seg1">Seg 1</string>
+				<string name="record_plan_seg2">Seg 2</string>
+				<string name="record_plan_seg3">Seg 3</string>
+				<string name="record_plan_seg4">Seg 4</string>
+				<string name="record_plan_seg5">Seg 5</string>
+				<string name="record_plan_seg6">Seg 6</string>
+				<string name="record_plan_motion">Motion</string>
+				<string name="record_plan_alarm">Alarm</string>
+				<string name="record_plan_normal">Normal</string>
+				<string name="record_plan_motionandalarm">Motion&#038;Alarm</string>
+				<string name="record_plan_get_failed">Get record plan failed</string>
+				<string name="record_plan_prerec_failed">Pre-rec time out of range</string>
+				<string name="record_plan_time_failed">Begin time later than end time</string>
+				<string name="record_plan_time_invalid">Begin time or end time invalid</string>
+				
+				<!-- IntelBrass -->
+				<string name="intelbrass_title">IntelBrass</string>
+				<string name="intelbrass_armed">Ctrl Armed</string>
+					<string name="intelbrass_armed_mode">Mode: </string>
+					<string name="intelbrass_armed_scene">Scene: </string>
+					<string name="intelbrass_armed_psw">Password: </string>
+				<string name="intelbrass_subsystem">Subsystem Set</string>
+					<string name="intelbrass_subsystem_chn">Channel: </string>
+					<string name="intelbrass_subsystem_active">Active: </string>
+				<string name="intelbrass_bypass">Bypass Set</string>
+					<string name="intelbrass_bypass_local_chn">Local Channel: </string>
+					<string name="intelbrass_bypass_ext_chn">Extend Channel: </string>
+					<string name="intelbrass_bypass_mode">Mode: </string>
+					<string name="intelbrass_bypass_psw">Password: </string>
+				<string name="intelbrass_pgm">PGM Set</string>
+					<string name="intelbrass_pgm_chn">Channel: </string>
+					<string name="intelbrass_pgm_active">Active: </string>
+				<string name="intelbrass_bell">Alarm Bell</string>
+					<string name="intelbrass_start_alarmbell">Alarm Bell</string>
+					<string name="intelbrass_silent_alarmbell">Slient Alarm Bell </string>
+					<string name="intelbrass_bell_chn">Channel: </string>
+					<string name="intelbrass_bell_active">Bell: </string>
+				<string name="intelbrass_cid">Alarm Event</string>
+					<string name="intelbrass_cid_start">Start Listen</string>
+					<string name="intelbrass_cid_stop">Stop Listen</string>
+				<string name="intelbrass_state">Alarm Channel State</string>
+					<string name="intelbrass_state_type">Type: </string>
+					<string name="intelbrass_state_count">Input count: </string>
+					<string name="intelbrass_state_ret">Return count: </string>
+					<string name="intelbrass_state_chn">Channel: </string>
+					<string name="intelbrass_state_state">State: </string>
+				<string name="intelbrass_arm_mode">Arm Mode Info</string>
+					<string name="intelbrass_arm_mode_Mode">Arm Mode</string>
+				<string name="intelbrass_many_state">Many State</string>
+
+				<!-- Interface testing activity -->
+				<string name="testing_activity_title">Interface testing</string>
+				
+		<!-- Remote Config -->
+	    <string name="remote_type_video_detect">Video Detect</string>
+	    <string name="remote_type_video_detect_motion">Motion Detect</string>
+	    <string name="remote_type_video_detect_blind">Video Mask</string>
+	    <string name="remote_type_alarm">Alarm Setting</string>
+	    <string name="remote_type_alarm_PIR">PIR Alarm</string>
+	    <string name="remote_type_alarm_light">LED</string>
+	    <string name="remote_type_alarm_linkage">Alarm trigger</string>
+	    <string name="remote_type_camera">Camera setting</string>
+	    <string name="remote_type_camera_stream">Video stream</string>
+	    <string name="remote_type_storage">Storage Manager</string>
+	    <string name="remote_type_storage_time">Schedule</string>
+	    <string name="remote_type_account">User Manager</string>
+	    <string name="remote_type_account_pwd_modify">Modify password</string>
+	    <string name="remote_chn_num">Channel</string>
+	    <string name="remote_enable">Enable</string>
+	    <string name="remote_advanced_option">Advanced config</string>
+	    <string name="remote_detect_time">Period</string>
+	    <string name="remote_dejitter">Anti-Dither</string>
+	    <string name="remote_dejitter_time">0-100s</string>
+	    <string name="remote_sensitivity">Sensitivity</string>
+	    <string name="remote_region">Region Setting</string>
+	    <string name="remote_delay">Delay</string>
+	    <string name="remote_delay_tiem">30-100s</string>
+	    <string name="remote_record">Record</string>
+	    <string name="remote_chn_chose">Choose channel</string>
+	    <string name="remote_alarm_out">Alarm output</string>
+	    <string name="remote_alarm_in">Alarm input</string>
+	    <string name="remote_snaptshot">Snapshot</string>
+	    <string name="remote_sensor_type">Sensor type</string>
+	    <string name="remote_copy_time">Copy</string>
+	    <string name="remote_second">s</string>
+	    <string name="remote_recotd_type_normal">Normal</string>
+	    <string name="remote_recotd_type_motion">Motion</string>
+	    <string name="remote_recotd_type_alarm">Alarm</string>
+	    <string name="remote_modify_flashlight">LED Setting</string>
+	    
+	     <!-- Remote Config-Channel Config -->
+	    <string name="remote_chn_chn_num">Channel:</string>
+	    <string name="remote_chn_cfg">Channel Config:</string>
+	    <string name="remote_chn_chn_name">Channel Name:</string>
+	    <string name="remote_chn_chn_name_null">Channel name can not be empty</string>
+	    <string name="remote_chn_chn_name_too_long">Channel name should not be longer than 80 characters</string><!-- New -->
+	    <string name="remote_chn_encode_type">Encode:</string>
+	    <string name="remote_chn_video">Video</string>
+	    <string name="remote_chn_audio">Audio</string>
+	    <string name="remote_chn_video_audio">Video/Audio:</string>
+	    <string name="remote_chn_resolution">Resolution:</string>
+	    <string name="remote_chn_frame_rate">Frame rate:</string>
+	    <string name="remote_chn_bit_rate">Bitrate:</string>
+	    <string name="remote_chn_bit_rate_range">Bitrate scope:</string>
+	    <string name="remote_chn_already_open">Channel is already opened</string><!-- New -->
+	    <string name="remote_chn_open_failed">Failed to get channel configuration</string>
+	    <string name="remote_chn_open_channel_first">Please open at least one channel</string>  
+	    <string name="remote_chn_bit_rate_not_null">Bit rate can not be empty</string>
+	    <string name="remote_chn_bit_rate_type">Bit rate type:</string>
+	    <string name="remote_chn_img_quality">Quality:</string>
+	    <string name="remote_chn_config_connection">Configuring</string>
+	    <string name="remote_sensor_type_nc">Normal close</string><!-- New -->
+	    <string name="remote_sensor_type_no">Normal open</string><!-- New -->
+	    
+	    <!-- Common-Message in Pop-up box -->
+	    <string name="common_msg_unknow_error">Unknown error</string> <!-- New -->
+	    <string name="common_msg_title">Prompt</string>
+	    <string name="common_msg_wait">Please wait...</string>
+	    
+	    <!-- Message-Configuration -->
+	    <string name="common_msg_get_cfg">Getting configuration...</string>
+	    <string name="common_msg_get_cfg_failed">Failed to get configuration</string> <!-- New -->
+	    <string name="common_msg_save_cfg">Saving configuration...</string>
+	    <string name="common_msg_save_cfg_success">Save configuration successfully</string> <!-- New -->
+	    <string name="common_msg_save_cfg_failed">Failed to save configuration</string>
+	    <string name="common_msg_cannot_save">Can\'t be saved</string> <!-- New -->
+	    
+	    <!-- Alarm Push -->
+	    <string name="push_delete_push">Are you sure you want to stop to subscribe push?</string><!-- New -->
+	    <string name="push_cancel_push">Stop to subscribe successfully</string><!-- New -->
+	    <string name="push_cancel_push_failed">Failed to stop subscribe</string><!-- New -->
+	    <string name="push_push_success">Subscribe successfully</string>
+	    <string name="push_push_failed">Failed to subscribe</string><!-- New -->
+	    <string name="push_period">Period</string>
+	    <string name="push_period_invalid">Period should be 1-365</string><!-- New -->
+	    <string name="push_chn_not_exist">Channel doesn\'t exist.</string><!-- New -->
+	    <string name="push_subscribe_failed">Failed to subscribe, make sure you have login goolge account</string><!-- New -->
+	    <string name="push_type">Push type</string>
+	    <string name="push_no_record_open_preview">No record and turn to open live preview</string><!-- New -->
+	    <string name="push_no_data">No Alarm</string>
+	    <string name="push_type_disk_alarm">HDD Alarm</string>
+	    <string name="push_update_prompt">To get notification, re-subscribe is required since GCM\'s upgrade. Re-subscribe right now? If cancel, you also are available to re-subscribe in "Push Config".</string>
+		<string name="push_update_prompt_ios">To get notification, re-subscribe is required since previous push certificate is expired. You can re-subscribe in \"Push Config\" to active push notification again.</string>
+		<string name="push_re_subscribe_wait">Re-subscribing...</string>
+		<string name="push_refresh_prompt">Refresh to get notification again.</string>
+		
+		<!-- Common-Time Related -->
+	    <string name="common_title_date">Date</string>
+	    <string name="common_title_time">Time</string>
+	    <string name="common_title_year">Year</string>
+	    <string name="common_title_month">Month</string>
+	    <string name="common_title_day">Day</string>
+	    <string name="common_title_oral_day">(Day)</string>
+	    <string name="common_title_hour">Hour</string>
+	    <string name="common_title_minute">Minute</string>
+	    <string name="common_title_second">Second</string>
+	    <string name="common_title_comma">,</string>
+	    
+	    <!-- Device Manager-text on page -->
+	    <string name="dev_name">Name:</string>
+	    <string name="dev_address">Address:</string>
+	    <!--dev_sn 中文需要考虑对齐-->
+	    <string name="dev_sn">SN:</string> <!-- new -->
+	    <string name="dev_port">Port:</string>
+	    <string name="dev_username">Username:</string>
+	    <string name="dev_password">Password:</string>
+	    <string name="dev_stream_type">Stream:</string>
+	    <string name="dev_stream_main">Main</string>
+	    <string name="dev_stream_extra">Extra</string>
+	    <string name="dev_test_ret_ok">Device connect successfully</string>
+	    <string name="dev_type">Register Mode:</string> <!-- new -->
+	    <string name="dev_scan">Scan QR Code</string> <!-- new -->
+	    <string name="dev_start_preview">Start Live Preview</string> <!-- new -->
+	    <string name="dev_import_cloud_dev">Import Cloud Device</string><!-- new -->
+	    
+	    <!-- Network -->
+	    <string name="dev_state_disconnected">Network is not available. Please check it.</string> <!-- New -->
+	    <string name="push_image_notover">Downloading image from device. Are you sure you want to exit?</string><!-- New -->
+	    
+	    <!-- Common-Button or Page Title -->
+	    <string name="common_confirm">OK</string>
+	    <string name="common_cancel">Cancel</string>
+	    <string name="common_dev_list">Device List</string><!-- New -->
+	    
+	    <string name="pb_time_restrict">Invalid period</string><!-- New -->
+	    <string name="pb_start_time">Begin time</string>
+    	<string name="pb_end_time">End time</string>
+					
+	<string name="begin_time">Begin: </string>
+	<string name="end_time">End: </string>
+	<string name="time_setting">Setting</string>
+	<string name="get_config">Get</string>
+	<string name="set_config">Set</string>
+	<string name="subscribe">Subscribe</string>
+	<string name="operation_cancel">Cancel</string>
+	<string name="bt_return">Return</string>
+	
+	<string name="play_back_pause">Pause</string>
+	<string name="play_back_play">Play</string>
+	<string name="play_back_fast">Fast</string>
+	<string name="play_back_slow">Slow</string>
+	<string name="play_back_normal">Normal</string>
+	
+	<string name="stream_master">Master</string>
+	<string name="stream_sub1">Sub-1</string>
+	<string name="stream_sub2">Sub-2</string>
+	<string name="stream_sub3">Sub-3</string>
+	
+	<string name="week_day_sun">Sun</string>
+	<string name="week_day_mon">Mon</string>
+	<string name="week_day_tue">Tue</string>
+	<string name="week_day_wed">Wed</string>
+	<string name="week_day_thur">Thur</string>
+	<string name="week_day_fri">Fri</string>
+	<string name="week_day_sat">Sat</string>
+	
+	<string name="channel_name">Channel </string>
+	
+	<string name="info_success">success</string>
+	<string name="info_failed">failed</string>
+	<string name="info_check">please check input</string>
+</resources>

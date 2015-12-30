@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp" >
+
+    <ImageView
+        android:id="@+id/control_img"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:background="@drawable/node_image_bg" />
+
+    <TextView
+        android:id="@+id/control_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@id/control_img"
+        android:layout_alignRight="@id/control_img"
+        android:layout_below="@id/control_img"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="ID:000000" />
+
+    <RelativeLayout
+        android:id="@+id/control_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/control_img"
+        android:layout_alignTop="@id/control_img"
+        android:layout_alignBottom="@id/control_text_id"
+        android:layout_marginLeft="5dp" >
+
+        
+        
+        <RelativeLayout
+            android:id="@+id/control_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:id="@+id/control_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="control-title"
+                android:textColor="@color/ssiotgreen"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/control_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="3dp"
+                android:src="@drawable/online" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/control_divider_bar"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/control_title_bar"
+            android:src="#fff39800" />
+
+        <RelativeLayout
+            android:id="@+id/control_detail_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/control_divider_bar"
+            android:layout_marginTop="10dp"
+            android:background="#fff39800" >
+
+            <TextView
+                android:id="@+id/control_sensorcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:text="设备数量 : 0"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/control_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="3dp"
+                android:src="@drawable/moni_more_detail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/control_more"
+                android:text="详细" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<!--     在底部的 -->
+
+    <RadioGroup
+        android:id="@+id/bottom_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ff8fc31f"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio_moni_data"
+            style="@style/top_tab"
+            android:drawableTop="@drawable/moni_data"
+            android:text="数据" />
+
+        <RadioButton
+            android:id="@+id/radio_moni_chart"
+            style="@style/top_tab"
+            android:drawableTop="@drawable/moni_chart"
+            android:text="曲线" />
+
+        <RadioButton
+            android:id="@+id/radio_moni_calibration"
+            style="@style/top_tab"
+            android:drawableTop="@drawable/moni_calibration"
+            android:text="校准" />
+
+        <RadioButton
+            android:id="@+id/radio_moni_configure"
+            style="@style/top_tab"
+            android:drawableTop="@drawable/moni_config"
+            android:text="配置" />
+
+        <RadioButton
+            android:id="@+id/radio_moni_alarm"
+            style="@style/top_tab"
+            android:drawableTop="@drawable/moni_config"
+            android:text="预警" />
+    </RadioGroup>
+    
+<RelativeLayout 
+    android:id="@+id/moni_detail_holder_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_tab"></RelativeLayout>
+</RelativeLayout>

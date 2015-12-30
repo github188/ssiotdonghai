@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ptzroot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="280dp" >
+
+    <com.ssiot.donghai.view.SquareLayout
+        android:id="@+id/directions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btn_lup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_dahua_bk_select"
+                android:src="@drawable/dahua_up_l" />
+
+            <ImageButton
+                android:id="@+id/btn_up"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_dahua_bk_select"
+                android:src="@drawable/dahua_up" />
+
+            <ImageButton
+                android:id="@+id/btn_rup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_dahua_bk_select"
+                android:src="@drawable/dahua_up_r"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btn_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_dahua_bk_select"
+                android:src="@drawable/dahua_left"/>
+
+            <ImageButton
+                android:id="@+id/btn_more"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_dahua_bk"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btn_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_dahua_bk_select"
+                android:src="@drawable/dahua_right"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btn_ldown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_dahua_bk_select"
+                android:src="@drawable/dahua_down_l"/>
+
+            <ImageButton
+                android:id="@+id/btn_down"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/dahua_down"
+                android:background="@drawable/btn_dahua_bk_select"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_rdown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/dahua_down_r"
+                android:background="@drawable/btn_dahua_bk_select"/>
+        </LinearLayout>
+    </com.ssiot.donghai.view.SquareLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/directions"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/btn_z_add"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/btn_dahua_bk_select"
+            android:scaleType="center"
+            android:src="@drawable/dahua_enlarge_4"
+            android:text="@string/live_activity_z_add" />
+
+<!--         <TextView -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="match_parent" -->
+<!--             android:layout_gravity="center_horizontal" -->
+<!--             android:layout_weight="1" -->
+<!--             android:gravity="center" -->
+<!--             android:text="缩放" /> -->
+
+        <ImageButton
+            android:id="@+id/btn_z_dec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/btn_dahua_bk_select"
+            android:scaleType="center"
+            android:src="@drawable/dahua_decrease_4"
+            android:text="@string/live_activity_z_dec" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/directions"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/btn_f_dec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/btn_dahua_bk_select"
+            android:scaleType="center"
+            android:src="@drawable/dahua_fou_add_4"
+            android:text="@string/live_activity_f_dec" />
+
+<!--         <TextView -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="match_parent" -->
+<!--             android:layout_gravity="center_horizontal" -->
+<!--             android:layout_weight="1" -->
+<!--             android:gravity="center" -->
+<!--             android:text="调焦" /> -->
+
+        <ImageButton
+            android:id="@+id/btn_f_add"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/btn_dahua_bk_select"
+            android:scaleType="center"
+            android:src="@drawable/dahua_fou_decrease_4"
+            android:text="@string/live_activity_f_add"/>
+    </LinearLayout>
+
+</RelativeLayout>

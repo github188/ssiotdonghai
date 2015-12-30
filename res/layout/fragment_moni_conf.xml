@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/moni_title_4"
+        layout="@layout/moni_title_bar" />
+    
+
+    <RelativeLayout 
+        android:id="@+id/conf_name_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/moni_title_4">
+        
+        <EditText 
+            android:id="@+id/conf_name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/conf_name"
+            android:layout_centerVertical="true"
+            android:text="名称:"/>
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/conf_id_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/conf_name_bar">
+        
+        <TextView 
+            android:id="@+id/conf_id"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/conf_id"
+            android:layout_centerVertical="true"
+            android:text="ID:"/>
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/conf_freq_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/conf_id_bar">
+        
+        <Spinner 
+            android:id="@+id/conf_freq"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/spinner_back"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/conf_freq"
+            android:layout_centerVertical="true"
+            android:text="上报频率:"/>
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/conf_longti_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/conf_freq_bar">
+        
+        <EditText 
+            android:id="@+id/conf_longti"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/conf_longti"
+            android:layout_centerVertical="true"
+            android:text="经度:"/>
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/conf_lati_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/conf_longti_bar">
+        
+        <EditText 
+            android:id="@+id/conf_lati"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/conf_lati"
+            android:layout_centerVertical="true"
+            android:text="纬度:"/>
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/conf_remark_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/conf_lati_bar">
+        
+        <EditText 
+            android:id="@+id/conf_remark"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/conf_remark"
+            android:layout_centerVertical="true"
+            android:text="备注:"/>
+    </RelativeLayout>
+    
+    <Button 
+        android:id="@+id/conf_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/conf_remark_bar"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_bk"
+        android:text="发送"/>
+    
+</RelativeLayout>

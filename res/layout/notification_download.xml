@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" > 
+
+    <ImageView 
+        android:id="@+id/noti_image" 
+        android:layout_width="wrap_content" 
+        android:layout_height="match_parent" /> 
+
+    <TextView 
+        android:id="@+id/noti_text" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_toRightOf="@+id/image" 
+        android:textColor="#FFF" /> 
+
+<!--     style="?android:attr/progressBarStyleHorizontal"  -->
+<!--     android:layout_below="@id/noti_text"  -->
+    <ProgressBar 
+        android:id="@+id/noti_progress" 
+        style="@android:style/Widget.ProgressBar.Horizontal"  
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_toRightOf="@id/noti_image"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" 
+        android:max="100" 
+        android:progress="50" /> 
+
+</RelativeLayout>

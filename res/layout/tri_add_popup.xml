@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <Spinner 
+        android:id="@+id/tri_pop_sensor_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"/>
+    
+    <Spinner 
+        android:id="@+id/tri_pop_maxmin_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"/>
+    
+    <EditText 
+        android:id="@+id/tri_maxmin_value_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numeric="decimal"/>
+    
+    <Button 
+        android:id="@+id/tri_pop_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加"/>
+    <Button 
+        android:id="@+id/tri_pop_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取消"/>
+    
+</LinearLayout>

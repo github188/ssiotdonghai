@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/live_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <SurfaceView
+        android:id="@+id/view_PlayWindow"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        class="SurfaceView" />
+
+    <Button
+        android:id="@+id/bt_live_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bt_ptz"
+        android:layout_alignRight="@+id/bt_ptz"
+        android:layout_below="@+id/bt_ptz"
+        android:text="@string/live_activity_volume" />
+
+    <Button
+        android:id="@+id/bt_ptz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_startRecord"
+        android:layout_alignRight="@+id/button_startRecord"
+        android:layout_below="@+id/bt_sound"
+        android:text="@string/live_activity_ptz" />
+
+    <Button
+        android:id="@+id/bt_live_capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/bt_sound"
+        android:layout_below="@+id/bt_ptz"
+        android:layout_toRightOf="@+id/bt_live_volume"
+        android:text="@string/live_activity_capture" />
+
+    <Button
+        android:id="@+id/bt_encode"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_live_volume"
+        android:layout_toLeftOf="@+id/bt_live_capture"
+        android:text="@string/live_activity_encode" />
+
+    <Button
+        android:id="@+id/bt_live_quality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bt_encode"
+        android:layout_alignBottom="@+id/bt_encode"
+        android:layout_alignLeft="@+id/bt_live_capture"
+        android:layout_alignRight="@+id/bt_live_capture"
+        android:text="@string/live_activity_quality" />
+
+    <Button
+        android:id="@+id/bt_flash"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_live_capture"
+        android:layout_alignLeft="@+id/bt_live_capture"
+        android:text="@string/live_activity_flash" />
+
+    <Spinner
+        android:id="@+id/sp_live_stream"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/view_PlayWindow"
+        android:layout_toRightOf="@+id/bt_flash" />
+
+    <Button
+        android:id="@+id/button_startRecord"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_ptz"
+        android:layout_alignParentLeft="true"
+        android:text="@string/live_activity_start" />
+
+    <Button
+        android:id="@+id/bt_sound"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sp_live_stream"
+        android:layout_toRightOf="@+id/bt_ptz"
+        android:text="@string/live_activity_close_sound" />
+
+</RelativeLayout>

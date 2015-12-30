@@ -1,0 +1,212 @@
+/*
+ * Copyright 2011 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.ssiot.donghai;
+
+import java.util.Properties;
+
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.os.Bundle;
+import android.os.Handler;
+import android.preference.PreferenceManager;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.View.OnClickListener;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.*;
+import android.support.v7.app.ActionBarActivity;
+
+public class LoginActivity extends ActionBarActivity {
+    private EditText logEditText;
+    private EditText pwdEditText;
+    private CheckBox checkbox;
+    private Button logButton;
+    private String userName = "";
+    private String password = "";
+    private String uniqueID = "";
+    private Dialog mWaitDialog;
+
+    private final int MSG_LOGIN_RETURN = 1;
+    private final int MSG_LOGIN_TIMEOUT = 2;
+    private final int MSG_LOGIN_CON_FAIL = 3;
+    private Handler mHandler = new Handler() {
+        public void handleMessage(android.os.Message msg) {
+            if (null != mWaitDialog){
+                mWaitDialog.dismiss();
+            }
+            switch (msg.what) {
+                case MSG_LOGIN_RETURN:
+                    removeMessages(MSG_LOGIN_TIMEOUT);
+                    if (!TextUtils.isEmpty(uniqueID)) {
+                        SharedPreferences mPref = PreferenceManager
+                                .getDefaultSharedPreferences(LoginActivity.this);
+                        if (mPref != null) {
+                            Editor editor = mPref.edit();
+                            editor.putString("username", userName);
+                            editor.putString("password", password);
+                            editor.putString("rememberPWD", checkbox.isChecked() ? "yes" : "no");
+                            editor.commit();
+                        }
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        intent.putExtra("userkey", uniqueID);
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "用户名或密码有误",
+                                Toast.LENGTH_LONG).show();
+                    }
+                    break;
+                case MSG_LOGIN_TIMEOUT:
+                    Toast.makeText(getApplicationContext(), "登陆失败",
+                            Toast.LENGTH_LONG).show();
+                    break;
+                case MSG_LOGIN_CON_FAIL:
+                    Toast.makeText(getApplicationContext(), "连接服务器失败",
+                            Toast.LENGTH_LONG).show();
+                    break;
+                default:
+                    break;
+            }
+        };
+    };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // ����ȫ��
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_login);
+        /*
+         * LayoutInflater layout=this.getLayoutInflater(); View
+         * view=layout.inflate(R.layout.activity_main,null);
+         */
+        logEditText = (EditText) findViewById(R.id.logEditText);
+        pwdEditText = (EditText) findViewById(R.id.pwdEditText);
+        checkbox = (CheckBox) findViewById(R.id.checkBox1);
+        logButton = (Button) findViewById(R.id.logButton);
+        SharedPreferences mPref = PreferenceManager.getDefaultSharedPreferences(this);
+        if (mPref != null) {
+            String pro_username = mPref.getString("username", "");
+            String pro_password = mPref.getString("password", "");
+            String pro_isRemember = mPref.getString("rememberPWD", "");
+            if (!TextUtils.isEmpty(pro_username)) {
+                loadUserInfo(pro_username, pro_password, pro_isRemember);
+            }
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (null != logEditText){
+            logEditText.requestFocus();
+        }
+        logButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                userName = logEditText.getText().toString();
+                password = pwdEditText.getText().toString();
+                String isRemember;
+
+                if (TextUtils.isEmpty(userName) || TextUtils.isEmpty(password)) {
+                    Toast.makeText(getApplicationContext(), "用户名和密码不能为空", Toast.LENGTH_LONG)
+                            .show();
+                } else {
+//                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+//                    builder.setMessage("正在连接服务器...");
+//                    mWaitDialog = builder.create();
+                    mWaitDialog = createLoadingDialog(LoginActivity.this, "正在登陆");
+                    mWaitDialog.show();
+                    mHandler.sendEmptyMessageDelayed(MSG_LOGIN_TIMEOUT, 8000);
+                    new Thread(new getUniqueID()).start();
+                }
+            }
+        });
+
+    }
+
+    /*
+     * Ԥ�����û���Ϣ
+     * @param name �û���
+     * @param password ����
+     * @param isRemember �Ƿ��ס����
+     */
+    private void loadUserInfo(String name, String password, String isRemember) {
+        if (isRemember.contains("yes")) {
+            logEditText.setText(name);
+            pwdEditText.setText(password);
+            checkbox.setChecked(true);
+        } else if (!TextUtils.isEmpty(name)) {
+            logEditText.setText(name);
+        }
+    }
+
+    private class getUniqueID implements Runnable {
+        @Override
+        public void run() {
+            try {
+//                SoapRequestDataFromWebService hasUserInfoSoap = new SoapRequestDataFromWebService();
+//                uniqueID = hasUserInfoSoap.HasAccountByNameAndPasswordFromWebService(userName,
+//                        password);
+                ConSQL sql = new ConSQL();
+                if (sql.ConnectSQl()){
+                    uniqueID = sql.getUniqueIDFromDB(userName, password);
+                    mHandler.sendEmptyMessage(MSG_LOGIN_RETURN);
+                } else {
+                    mHandler.sendEmptyMessage(MSG_LOGIN_CON_FAIL);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
+    public Dialog createLoadingDialog(Context context, String msg) {  
+        LayoutInflater inflater = LayoutInflater.from(context);  
+        View v = inflater.inflate(R.layout.dialog_loading, null);// 得到加载view  
+        LinearLayout layout = (LinearLayout) v.findViewById(R.id.dialog_view);// 加载布局  
+        // main.xml中的ImageView  
+        ImageView spaceshipImage = (ImageView) v.findViewById(R.id.img);  
+        TextView tipTextView = (TextView) v.findViewById(R.id.tipTextView);// 提示文字  
+        // 加载动画  
+        Animation hyperspaceJumpAnimation = AnimationUtils.loadAnimation(  
+                context, R.anim.loading_animation);  
+        // 使用ImageView显示动画  
+        spaceshipImage.startAnimation(hyperspaceJumpAnimation);  
+        tipTextView.setText(msg);// 设置加载信息  
+  
+        Dialog loadingDialog = new Dialog(context, R.style.loading_dialog);// 创建自定义样式dialog  
+  
+        loadingDialog.setCancelable(false);// 不可以用“返回键”取消  
+        loadingDialog.setContentView(layout, new LinearLayout.LayoutParams(  
+                LinearLayout.LayoutParams.MATCH_PARENT,  
+                LinearLayout.LayoutParams.MATCH_PARENT));// 设置布局  
+        return loadingDialog;  
+    }
+}

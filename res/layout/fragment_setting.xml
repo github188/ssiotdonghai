@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <ImageView 
+        android:id="@+id/app_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:paddingTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_launcher"/>
+    
+    <TextView 
+        android:id="@+id/app_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_icon"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp"
+        android:text="0.0"
+        android:textSize="20sp"/>
+    
+    <TextView 
+        android:id="@+id/app_version_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_version"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp"
+        android:textSize="20sp"/>
+    
+    <Button 
+        android:id="@+id/checkupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/soft_check"
+        android:background="@drawable/bk_update_select"/>
+    
+    <TextView 
+        android:id="@+id/app_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="更多功能，敬请期待"
+        android:textSize="16sp"/>
+    
+</RelativeLayout>

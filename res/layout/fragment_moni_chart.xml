@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include 
+        android:id="@+id/moni_title_2"
+        layout="@layout/moni_title_bar"/>
+    
+    <TextView 
+        android:id="@+id/moni_chart_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/moni_title_2"/>
+    
+    <HorizontalScrollView 
+        android:id="@+id/moni_chart_selector"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/moni_title_2"
+        android:layout_marginLeft="5dp">
+        <LinearLayout 
+            android:id="@+id/moni_chart_select"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            
+        </LinearLayout>
+    </HorizontalScrollView>
+    
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="320dp"
+        android:layout_below="@id/moni_chart_selector"
+        android:layout_marginTop="20dp" >
+
+        <view
+            android:id="@+id/more_line_view"
+            android:layout_width="fill_parent"
+            android:layout_height="300dp"
+            class="com.ssiot.donghai.view.MoreLineView" />
+    </HorizontalScrollView>
+
+</RelativeLayout>

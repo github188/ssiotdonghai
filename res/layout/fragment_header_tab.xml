@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <RadioGroup  
+        android:id="@+id/rg_tab"  
+        android:orientation="horizontal"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:visibility="gone"
+        android:background="#ff8fc31f">  
+        <RadioButton  
+            android:id="@+id/radiobutton_moni"
+            style="@style/top_tab"  
+            android:drawableLeft="@drawable/radio_monitor_icon"  
+            android:text="监测" />  
+        <RadioButton  
+            android:id="@+id/radiobutton_control"
+            style="@style/top_tab"  
+            android:drawableLeft="@drawable/radio_control_icon"  
+            android:text="控制" />  
+        <RadioButton  
+            style="@style/top_tab"  
+            android:drawableLeft="@drawable/radio_map_icon"  
+            android:drawablePadding="0dp"
+            android:visibility="gone"
+            android:text="地图" />  
+    </RadioGroup>  
+    
+    <RelativeLayout 
+        android:id="@+id/detail_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rg_tab">
+        
+    </RelativeLayout>
+    
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="-20dp"
+    android:layout_marginLeft="-20dp"
+    android:layout_marginRight="-17dp"
+    android:layout_marginTop="-20dp"
+    android:gravity="bottom|center|left|right|top"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ssiot.donghai.MainActivity" >
+    
+
+    <RelativeLayout 
+        android:id="@+id/his_control_part"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        >
+        <Button 
+            android:id="@+id/startsearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/search"
+            android:textColor="@color/ssiotgreen"
+            android:background="@drawable/search_bk"/>
+        <ImageButton 
+            android:id="@+id/startcamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/startsearch"
+            android:layout_alignTop="@id/startsearch"
+            android:layout_alignBottom="@id/startsearch"
+            android:src="@drawable/start_camera"
+            android:background="@drawable/search_bk"/>
+        <EditText 
+            android:id="@+id/qrcode_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/startcamera"
+            android:layout_alignTop="@id/startcamera"
+            android:layout_alignBottom="@id/startcamera"
+            android:background="@drawable/search_bk"
+            />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/his_his_part"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/his_control_part"
+        android:paddingTop="20dp" >
+
+        <TextView
+            android:id="@+id/his_his_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/his_list_title"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="@string/search_his_list_title" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  
+<!--     radius表示progressBar两边的圆角角度，angle表示渐变角度（方向） -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="35.0dip" />
+            <gradient android:startColor="#656666" android:endColor="#dbdedf" android:angle="270.0" android:centerY="0.75" android:centerColor="#bbbbbc" />
+        </shape>
+    </item>
+    
+<!--     <item android:id="@android:id/background"> -->
+<!--             <nine-patch android:src="@drawable/my_progress_bg" > -->
+<!--             </nine-patch> -->
+<!--     </item> -->
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="38.0dip" />
+                <gradient android:startColor="#f39800" android:endColor="#f39800" android:angle="360.0" />
+            </shape>
+        </clip>
+    </item>
+<!--     <item android:id="@android:id/progress" -->
+<!--         android:drawable="@drawable/progress_index2" /> -->
+    
+<!--     <item android:id="@android:id/progress">   -->
+<!--        <clip>   -->
+<!--            <nine-patch android:src="@drawable/progress_index2">  -->
+<!--            </nine-patch>   -->
+<!--        </clip>  -->
+<!--     </item> -->
+    
+    
+<!--     <item -->
+<!--         android:id="@android:id/progress"> -->
+<!--           <clip -->
+<!--             android:clipOrientation="horizontal" -->
+<!--             android:drawable="@drawable/progress_index" -->
+<!--             android:gravity="left" > -->
+<!--         </clip> -->
+<!--     </item> -->
+    
+</layer-list>

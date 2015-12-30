@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<!--     <TextView  -->
+<!--         android:id="@+id/rtsp_title" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:textColor="#00ff00"/> -->
+    
+    <com.ssiot.donghai.view.SquareLayout 
+        android:id="@+id/rtsp_square"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+        <VideoView
+        android:id="@+id/video_rtsp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+    </com.ssiot.donghai.view.SquareLayout>
+    
+
+    <TextView 
+        android:id="@+id/rtsp_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/rtsp_square"
+        android:textColor="#69c911"
+        android:gravity="center"
+        android:textSize="20sp"/>
+</RelativeLayout>

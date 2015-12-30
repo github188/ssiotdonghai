@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ssiot.donghai"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:name="com.ssiot.donghai.ContextUtilApp"
+        android:theme="@style/AppTheme" >
+        
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".hikvision.VideoActivity"
+            android:label="@string/live_activity_title"
+            android:screenOrientation="portrait" />
+        
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" >
+<!--             <intent-filter> -->
+<!--                 <action android:name="android.intent.action.MAIN" /> -->
+<!--                 <category android:name="android.intent.category.LAUNCHER" /> -->
+<!--             </intent-filter> -->
+        </activity>
+        
+        <activity
+            android:name=".myzxing.MipcaActivityCapture"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        
+        
+        
+        
+        <activity
+            android:name=".dahuavideo.LoginModeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+<!--             <intent-filter> -->
+<!--                 <action android:name="android.intent.action.MAIN" /> -->
+<!--                 <category android:name="android.intent.category.LAUNCHER" /> -->
+<!--             </intent-filter> -->
+        </activity>
+        
+        <activity
+            android:name=".dahuavideo.P2PActivity"
+            android:label="@string/p2p_activity_title"
+            android:screenOrientation="portrait" />
+        
+        <activity
+            android:name=".dahuavideo.TestNetSDKActivity"
+            android:label="@string/login_activity_title"
+            android:screenOrientation="portrait" />
+        
+        <activity
+            android:name=".dahuavideo.ContentListActivity"
+            android:label="@string/fun_activity_title"
+            android:screenOrientation="portrait" />
+        
+        <activity
+            android:name=".dahuavideo.GlobalSettingActivity"
+            android:label="@string/global_setting_activity_title"
+            android:screenOrientation="portrait" />
+        
+        <activity
+            android:name=".dahuavideo.LiveActivity"
+            android:label="@string/live_activity_title"
+            android:screenOrientation="portrait" />
+        
+        <activity
+            android:name=".dahuavideo.DahuaLiveActivity"
+            android:label="@string/live_activity_title"
+            android:screenOrientation="portrait" />
+        
+        <activity
+            android:name=".hikvision.RTSPVideo"
+            android:label="@string/live_activity_title"
+            android:screenOrientation="portrait" />
+        
+        <receiver
+            android:name="com.ssiot.donghai.receiver.SsiotReceiver" >
+            <intent-filter>
+                <action android:name="com.ssiot.donghai.SHOWMSG" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+    
+    
+
+</manifest>

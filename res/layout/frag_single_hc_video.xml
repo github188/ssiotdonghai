@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:jurong="http://schemas.android.com/apk/res/com.ssiot.jurong"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <SurfaceView 
+        android:id="@+id/hc_preview"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"/>
+<!--     <include -->
+<!--         android:id="@+id/video_big_top" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="240dp" -->
+<!--         layout="@layout/big_top" /> -->
+
+
+    
+    <TextView 
+        android:id="@+id/ptz_title"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_below="@id/hc_preview"
+        android:text="球机控制区域"
+        android:textSize="20sp"
+        android:gravity="center"/>
+    
+    <TextView
+        android:id="@+id/big_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ptz_title"
+        android:background="#99999999"
+        android:gravity="center"
+        android:text="大棚"
+        android:textSize="19sp" />
+    
+    <include 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ptz_title"
+        android:layout_alignParentBottom="true"
+        layout="@layout/dahua_ptzview"/>
+
+</RelativeLayout>

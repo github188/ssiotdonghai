@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    xmlns:ssiot="http://schemas.android.com/apk/res/com.ssiot.donghai" 
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    >  
+  
+    <ImageButton
+        android:id="@+id/icon_img"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:layout_centerInParent="true"
+        android:clickable="false"
+        android:background="@null"
+        android:paddingBottom="5dip"  
+        android:paddingTop="5dip" />  
+    <TextView   
+        android:id="@+id/icon_text"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"     
+        android:layout_below="@id/icon_img"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dip"/>  
+  
+</RelativeLayout>  
