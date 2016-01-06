@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/moni_title_1"
+        layout="@layout/moni_title_bar" />
+    
+    <RadioGroup  
+        android:id="@+id/rg_data_chart"  
+        android:orientation="horizontal"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:layout_below="@id/moni_title_1"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">  
+        <RadioButton  
+            android:id="@+id/radio_data"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textSize="14sp"
+            android:button="@null"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+	        android:background="@color/ssiot_title_yellow"
+	        android:drawablePadding="0dp"
+            android:drawableLeft="@drawable/moni_data"  
+            android:text="列表数据"
+            android:textColor="@color/radiobutton_select" />  
+        <RadioButton  
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textSize="14sp"
+            android:button="@null"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+	        android:background="@color/ssiot_title_yellow"
+	        android:drawablePadding="0dp"
+            android:drawableLeft="@drawable/moni_chart"  
+            android:text="曲线数据"
+            android:textColor="@color/radiobutton_select" />  
+    </RadioGroup>  
+    
+    <LinearLayout
+        android:id="@+id/seeker_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg_data_chart"
+        android:layout_margin="5dp"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="8" />
+
+        <SeekBar
+            android:id="@+id/moni_time_checker"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/pb_time_checker_bk"
+            android:max="4"
+            android:progressDrawable="@drawable/progressbar_timechecker_style"
+            android:thumb="@drawable/seekbar_thumb" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="8" />
+    </LinearLayout>
+        
+    <LinearLayout 
+        android:id="@+id/moni_time_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seeker_linear"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="十分钟"/>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="小时"/>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="天"/>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="月"/>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="年"/>
+    </LinearLayout>
+    
+    <HorizontalScrollView
+        android:id="@+id/data_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/moni_time_txt" >
+
+        <ListView
+            android:id="@+id/table_list"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp" />
+    </HorizontalScrollView>
+    
+    <RelativeLayout
+        android:id="@+id/chart_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:layout_below="@id/moni_time_txt" >
+        
+        <Spinner
+            android:id="@+id/chart_select" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/spinner_bk_black"
+            />
+
+        <lecho.lib.hellocharts.view.LineChartView
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/chart_select" >
+        </lecho.lib.hellocharts.view.LineChartView>
+    </RelativeLayout>
+
+</RelativeLayout>

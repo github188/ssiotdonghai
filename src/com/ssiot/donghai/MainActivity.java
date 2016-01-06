@@ -126,6 +126,7 @@ public class MainActivity extends ActionBarActivity implements FMainBtnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.title_green));
         
         mCache = new MyCache(this);
         Bundle b = getIntent().getExtras();

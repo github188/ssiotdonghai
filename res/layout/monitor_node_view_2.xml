@@ -176,7 +176,6 @@
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@id/moni_more"
             android:layout_centerVertical="true"
-			android:visibility="invisible"
             android:text="详细"/>
 
     </RelativeLayout>

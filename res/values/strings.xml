@@ -49,6 +49,9 @@
     <string name="search_his_list_title">查询历史</string>
     <string name="building">正在开发</string>
     
+    <string name="activity_diagnosefish">鱼病诊断</string>
+    <string name="activity_selectfish">鱼病诊断</string>
+    
 <!--     大华 -->
 	<string name="DemoInit">Demo initialization</string>
 	<string name="DemoExit">Demo exit</string>

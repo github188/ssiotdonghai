@@ -148,9 +148,9 @@ public class HeaderTabFrag extends BaseFragment{
     MonitorListAdapter2.DetailListener mDetailListener = new MonitorListAdapter2.DetailListener() {
         @Override
         public void showDetail(NodeView2Model n2m) {
-            /*//东海delete this
             FragmentTransaction transaction = fragmentManager.beginTransaction();
-            Fragment fragment = new MoniDetailHolderFrag();
+//            Fragment fragment = new MoniDetailHolderFrag();
+            Fragment fragment = new MoniDataAndChartFrag();
             Bundle bundle = new Bundle();
             bundle.putString("nodetitle", n2m._location);
             bundle.putBoolean("status", n2m._isonline.equals("在线"));
@@ -159,7 +159,7 @@ public class HeaderTabFrag extends BaseFragment{
             fragment.setArguments(bundle);
             transaction.replace(R.id.detail_content, fragment);
             transaction.addToBackStack(null);
-            transaction.commit();  */
+            transaction.commit();  
         }
     };
     ControlDetailListener mCtrDetailListener = new ControlDetailListener() {

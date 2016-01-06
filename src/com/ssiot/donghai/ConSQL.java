@@ -14,7 +14,7 @@ public class ConSQL{
 //        String JDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";// SQL数据库引擎
 //        String connectDB = "jdbc:microsoft:sqlserver://ssiot2014.sqlserver.rds.aliyuncs.com:3433;databasename=iot2014";// 数据源
         String JDriver = "net.sourceforge.jtds.jdbc.Driver";
-        String connectDB = "jdbc:jtds:sqlserver://ssiot2014.sqlserver.rds.aliyuncs.com:3433/iot2014";
+        String connectDB = "jdbc:jtds:sqlserver://ssiot2014.sqlserver.rds.aliyuncs.com:3433/iot2014;loginTimeout=9;socketTimeout=9";
         try {
             Class.forName(JDriver);// 加载数据库引擎，返回给定字符串名的类
         } catch (ClassNotFoundException e){

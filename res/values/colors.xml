@@ -25,6 +25,8 @@
     <drawable name="ssiot_green">#ff69c911</drawable>
     <color name="ssiotgreen">#ff69c911</color>
     <color name="ssiot_title_yellow">#fff39800</color>
+    <color name="datalist_header">#ffeb6100</color>
+    <color name="datalist_green">#ff009944</color>
     
     <color name="icon_yellow">#fffcdc</color>
     <color name="icon_green">#d9f0ea</color>

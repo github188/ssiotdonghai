@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fishes">
+        <item>淡水-鱼类-鳗鲡</item>
+        <item>淡水-鱼类-锦鲤</item>
+        <item>淡水-鱼类-鲫鱼</item>
+        <item>淡水-鱼类-鲌鱼</item>
+        <item>淡水-鱼类-草鱼</item>
+        <item>淡水-鱼类-团头鲂</item>
+        <item>淡水-鱼类-罗非鱼</item>
+        <item>淡水-鱼类-斑点叉尾鮰</item>
+        <item>淡水-鱼类-虹鳟</item>
+        <item>淡水-鱼类-加州鲈</item>
+        <item>淡水-鱼类-黄颡鱼</item>
+        <item>淡水-鱼类-鳜鱼</item>
+        <item>淡水-鱼类-黄鳝</item>
+        <item>淡水-鱼类-泥鳅</item>
+        <item>淡水-鱼类-乌醴</item>
+        <item>淡水-鱼类-鲟</item>
+        <item>淡水-鱼类-金鱼</item>
+        <item>淡水-鱼类-鲤</item>
+        <item>淡水-鱼类-青鱼</item>
+        <item>淡水-鱼类-大口鲶</item>
+        <item>淡水-鱼类-长吻鮠</item>
+        <item>淡水-鱼类-鲢</item>
+        <item>淡水-鱼类-鳙</item>
+        <item>淡水-鱼类-淡水白鲳</item>
+        <item>淡水-鱼类-白斑狗鱼</item>
+        <item>淡水-鱼类-鲮鱼</item>
+        <item>淡水-鱼类-罗汉鱼</item>
+        <item>淡水-鱼类-鲶</item>
+        <item>海水-甲壳类-对虾</item>
+    </string-array> 
+</resources>  
