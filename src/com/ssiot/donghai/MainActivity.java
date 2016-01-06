@@ -90,6 +90,8 @@ public class MainActivity extends ActionBarActivity implements FMainBtnClickList
                         Intent i = new Intent(SettingFrag.ACTION_SSIOT_UPDATE);
                         i.putExtra("checkresult", 2);
                         sendBroadcast(i);
+                    } else {
+                        Toast.makeText(MainActivity.this, "本地大于服务器上的版本号！", Toast.LENGTH_SHORT).show();
                     }
                     break;
                 case MSG_DOWNLOADING_PREOGRESS:
