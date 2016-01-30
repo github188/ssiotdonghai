@@ -97,7 +97,7 @@ public class LoginActivity extends ActionBarActivity {
             if (!TextUtils.isEmpty(pro_username)) {
                 userName = pro_username;
                 password = pro_password;
-                if (!TextUtils.isEmpty(userName) && ! TextUtils.isEmpty(password) && isDongHaiUser(userName)){
+                if (!TextUtils.isEmpty(userName) && ! TextUtils.isEmpty(password)){// && isDongHaiUser(userName)
 //                    mWaitDialog = Utils.createLoadingDialog(LoginActivity.this, "正在登陆");
 //                    mWaitDialog.show();
                     mHandler.sendEmptyMessageDelayed(MSG_LOGIN_TIMEOUT, 12000);
