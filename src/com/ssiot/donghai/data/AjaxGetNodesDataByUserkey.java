@@ -62,7 +62,10 @@ public class AjaxGetNodesDataByUserkey{
                 List<NodeModel> node_list = DataAPI.GetNodeListByAreaIDs(areaids); 
               //根据节点对象列表获取由","分隔的节点编号字符串
                 String nodenostr = DataAPI.GetNodeNoStringByNodeList(node_list);
-                
+                Log.v(tag, "-------GetAllNodesDataByUserkey---------nodenostr:" + nodenostr);
+                if (TextUtils.isEmpty(nodenostr)){
+                    return new ArrayList<NodeView2Model>();
+                }
                 List<NodeView2Model> nodeView2_list = MobileAPI.GetNodesInfoAndDataByNodenos(nodenostr);
                 
                 
